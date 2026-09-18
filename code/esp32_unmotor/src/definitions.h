@@ -74,6 +74,7 @@
 #define USER_SYS_STAIRS_CLOSED_INT     2
 #define USER_SYS_PRBS_OPEN_INT         3
 #define USER_SYS_PROFILE_CLOSED_INT    4
+#define USER_SYS_STEP_OPEN_INT         5
 
 /// Codes for modes of control
 #define PID_CONTROLLER                 0
@@ -639,7 +640,7 @@ void IRAM_ATTR onMqttReceived(char* lastTopic, byte* lastPayload, unsigned int l
         vTaskResume(h_identifyTask);
     }
     else if(strstr(lastTopic, USER_SYS_STEP_OPEN )){
-        codeTopic = USER_SYS_STEP_CLOSED_INT;
+        codeTopic = USER_SYS_STEP_OPEN_INT;
         deserializeJson(doc, lastPayload);
         low_val = hex2Float((const char *) doc["low_val"]);
         high_val = hex2Float((const char *) doc["high_val"]);
