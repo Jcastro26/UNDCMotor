@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../Library/CloudStorage/OneDrive-UniversidadNacionaldeColombia/UNAL/CONTROL/UNDCMotor/code"
+		},
+		{
+			"name": "esp32_unmotor",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
